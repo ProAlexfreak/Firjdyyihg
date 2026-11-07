@@ -70,26 +70,25 @@ async def receive_links(client, message):
         preview = escape(data["preview"], quote=True)
         main = escape(link, quote=True)
 
-        post = (
-            "POSTT\n\n"
+        
+post = (
+    "POSTT\n\n"
 
-            f'<a href="{preview}">'
-            "𝘾𝙇𝙄𝘾𝙆 𝙃𝙀𝙍𝙀 𝙁𝙊𝙍 𝙋𝙍𝙀𝙑𝙄𝙀𝙒 🔗⁠"
-            "</a>\n"
+    f'<a href="{preview}"><b><i>'
+    "CLICK HERE FOR PREVIEW 🔗"
+    "</i></b></a>\n"
 
-            f'<a href="{preview}">'
-            "𝘾𝙇𝙄𝘾𝙆 𝙃𝙀𝙍𝙀 𝙁𝙊𝙍 𝙋𝙍𝙀𝙑𝙄𝙀𝙒🔗⁠"
-            "</a>\n\n"
+    f'<a href="{preview}"><b><i>'
+    "CLICK HERE FOR PREVIEW 🔗"
+    "</i></b></a>\n\n"
 
-            "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗛𝗘𝗥𝗘 𝗢𝗡𝗟𝗬 "
-            "𝗙𝗢𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 𝗨𝗦𝗘𝗥 ⤵️\n"
+    "<b>DOWNLOAD HERE ONLY FOR PREMIUM USER ⤵️</b>\n\n"
 
-            f'<blockquote><i><a href="{main}">'
-            "Second link here"
-            "</a></i></blockquote>\n\n"
+    f"<blockquote><i><a href=\"{main}\">{main}</a></i></blockquote>\n\n"
 
-            "𝙏𝙝𝙚 𝙉𝙚𝙬 𝙒𝙤𝙧𝙡𝙙"
-        )
+    "<b><i>𝙏𝙝𝙚 𝙉𝙚𝙬 𝙒𝙤𝙧𝙡𝙙</i></b>"
+)
+
 
         await message.reply_text(
             post,
