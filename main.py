@@ -33,9 +33,7 @@ async def start_format(client, message):
         "step": "preview"
     }
 
-    await message.reply_text(
-        "Send Preview Link 🔗"
-    )
+    await message.reply_text("Send Preview Link 🔗")
 
 
 @app.on_message(
@@ -61,34 +59,33 @@ async def receive_links(client, message):
         data["preview"] = link
         data["step"] = "main"
 
-        await message.reply_text(
-            "Send Main Link 🔗"
-        )
+        await message.reply_text("Send Main Link 🔗")
         return
 
     if data["step"] == "main":
         preview = escape(data["preview"], quote=True)
         main = escape(link, quote=True)
 
-        
-post = (
-    "POSTT\n\n"
+        post = (
+            "POSTT\n\n"
 
-    f'<a href="{preview}"><b><i>'
-    "CLICK HERE FOR PREVIEW 🔗"
-    "</i></b></a>\n"
+            f'<a href="{preview}"><b><i>'
+            "CLICK HERE FOR PREVIEW 🔗"
+            "</i></b></a>\n"
 
-    f'<a href="{preview}"><b><i>'
-    "CLICK HERE FOR PREVIEW 🔗"
-    "</i></b></a>\n\n"
+            f'<a href="{preview}"><b><i>'
+            "CLICK HERE FOR PREVIEW 🔗"
+            "</i></b></a>\n\n"
 
-    "<b>DOWNLOAD HERE ONLY FOR PREMIUM USER ⤵️</b>\n\n"
+            "<b>DOWNLOAD HERE ONLY FOR PREMIUM "
+            "USER ⤵️</b>\n\n"
 
-    f"<blockquote><i><a href=\"{main}\">{main}</a></i></blockquote>\n\n"
+            f'<blockquote><i><a href="{main}">'
+            f'{main}'
+            '</a></i></blockquote>\n\n'
 
-    "<b><i>𝙏𝙝𝙚 𝙉𝙚𝙬 𝙒𝙤𝙧𝙡𝙙</i></b>"
-)
-
+            "<b><i>𝙏𝙝𝙚 𝙉𝙚𝙬 𝙒𝙤𝙧𝙡𝙙</i></b>"
+        )
 
         await message.reply_text(
             post,
