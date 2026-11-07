@@ -78,7 +78,7 @@ async def receive_links(client, message):
             "</a>\n"
 
             f'<a href="{preview}">'
-            "𝘾𝙇𝙄𝘾𝙆 𝙃𝙀𝙍𝙀 𝙁𝙊𝙍 𝙋𝙍𝙀𝙑𝙄𝙀𝙒🔗⁠'
+            "𝘾𝙇𝙄𝘾𝙆 𝙃𝙀𝙍𝙀 𝙁𝙊𝙍 𝙋𝙍𝙀𝙑𝙄𝙀𝙒🔗⁠"
             "</a>\n\n"
 
             "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗛𝗘𝗥𝗘 𝗢𝗡𝗟𝗬 "
